@@ -48,4 +48,5 @@ df["email"] = (
 print(df.head(10))
 print(df)
 print(df.columns)
+print(df.describe())
 
