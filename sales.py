@@ -54,4 +54,5 @@ print(df.dtypes)
 print(df.shape)
 print(df.isnull().sum())
 print(df.nunique())
+print(df.value_counts())
 
