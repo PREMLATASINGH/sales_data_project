@@ -60,4 +60,5 @@ print(df["last_name"].value_counts())
 print(df["major"].value_counts())
 print(df["major"].unique())
 print(df['city']=='delhi')
+print(df.sort_values(by='gpa',ascending=False))
 
