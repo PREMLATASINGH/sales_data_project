@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import random
 
 # -----------------------------
 # Helper lists
@@ -47,7 +46,6 @@ df["email"] = (
 )
 
 print(df.head(10))
-print(df)
 print(df.columns)
 print(df.describe())
 print(df.info())
@@ -55,15 +53,25 @@ print(df.dtypes)
 print(df.shape)
 print(df.isnull().sum())
 print(df.nunique())
-print(df.value_counts())
+# Summary statistics and counts
 print(df["first_name"].value_counts())
 print(df["last_name"].value_counts())
 print(df["major"].value_counts())
 print(df["major"].unique())
-print(df['city']=='delhi')
-print(df.sort_values(by='gpa',ascending=False))
-print(df.groupby('city').sum())
-plt.plot(df["city"])
+
+# Compare cities (case-sensitive)
+print(df['city'] == 'Delhi')
+
+# Top students by GPA
+print(df.sort_values(by='gpa', ascending=False).head(10))
+
+# Group by city: count, mean age, mean gpa
+print(df.groupby('city').agg({'student_id': 'count', 'age': 'mean', 'gpa': 'mean'}))
+
+# Plot city distribution
+city_counts = df['city'].value_counts()
+city_counts.plot(kind='bar')
+plt.tight_layout()
 plt.show()
 
 
