@@ -56,4 +56,5 @@ print(df.isnull().sum())
 print(df.nunique())
 print(df.value_counts())
 print(df["first_name"].value_counts())
+print(df["last_name"].value_counts())
 
