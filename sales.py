@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 import random
 
 # -----------------------------
@@ -62,4 +63,7 @@ print(df["major"].unique())
 print(df['city']=='delhi')
 print(df.sort_values(by='gpa',ascending=False))
 print(df.groupby('city').sum())
+plt.plot(df["city"])
+plt.show()
+
 
