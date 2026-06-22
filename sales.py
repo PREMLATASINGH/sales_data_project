@@ -50,4 +50,5 @@ print(df)
 print(df.columns)
 print(df.describe())
 print(df.info())
+print(df.dtypes)
 
