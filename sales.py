@@ -52,4 +52,5 @@ print(df.describe())
 print(df.info())
 print(df.dtypes)
 print(df.shape)
+print(df.isnull().sum())
 
